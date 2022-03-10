@@ -1,7 +1,21 @@
+from ctypes import util
 from django.shortcuts import render
-from django.http import HttpResponse
+
+from apiCalls import getPapers
  
 
 # Create your views here.
 def displayPapers (request):
-    return render(request, 'papers/papersList.html', {'value' : 10})
+    allPaperInfo = getPapers()
+    
+    papers = []
+    for paper in allPaperInfo:
+        papers.append({
+            'title' : paper['title'],
+            'authors' : paper['authors'],
+            'logoUrl' : paper['logoUrl'],
+            'id' : paper['id']
+        })
+
+    print(papers)
+    return render(request, 'papers/papersList.html', {'papers' : papers})

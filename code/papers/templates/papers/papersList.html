@@ -2,5 +2,21 @@
 
 {% block content %}
   <h2>LESGOOOO</h2>
-  <p>O valor passado foi <strong>{{ value }}</strong>!!!</p>
+  {% if papers %}
+  <ul>
+    {% for paper in papers %}
+      <li>
+        {% if paper.logoUrl != '' %}
+          <img src="{{ paper.logoUrl }}" alt="icon" class="center" width="15" height="15"/>
+        {% endif %}
+
+          <a href="{{ paper.id}}">{{ paper.title }}</a> <br> ({{paper.authors}})
+      </li>
+      <br>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p> Error </p>
+  {% endif %}
+
 {% endblock %}

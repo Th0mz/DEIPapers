@@ -13,6 +13,7 @@ NO_PERMITION = 403
 NOT_FOUND = 404
 
 url = "https://aduck.rnl.tecnico.ulisboa.pt/istpaper/papers"
+token = "ist195680"
 
 def getPapers (offset=0, limit=10):
     """ Get <limit> papers beggining at <offset> from istPaper database """
@@ -44,7 +45,7 @@ def postPaper (paper):
 
     headers = {
         "accept" : "application/json",
-        "Authorization" : "Bearer ist195680",
+        "Authorization" : f"Bearer {token}",
         "Content-Type" : "application/json"
     }
 
