@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  {% if error %} 
+    <h2> An Error occurred : </h2>
+  {% else %}
+    <h2> Success : </h2>
+  {% endif %}
+
+  <h4> Description : {{ message }}</h4>
+
+{% endblock %}

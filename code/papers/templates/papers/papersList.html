@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>LESGOOOO</h2>
+  <h2>Papers : </h2>
   {% if papers %}
   <ul>
     {% for paper in papers %}
@@ -10,7 +10,7 @@
           <img src="{{ paper.logoUrl }}" alt="icon" class="center" width="15" height="15"/>
         {% endif %}
 
-          <a href="{{ paper.id}}">{{ paper.title }}</a> <br> ({{paper.authors}})
+          <a href="{{ paper.id }}">{{ paper.title }}</a> <br> ({{paper.authors}})
       </li>
       <br>
     {% endfor %}

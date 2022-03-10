@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  {% if paper %} 
+    {% if paper.logoUrl != '' %}
+        <img src="{{ paper.logoUrl }}" alt="icon" class="center" width="30" height="30"/>
+    {% endif %}
+    
+    <h2> Title : {{ paper.title }}</h2>
+    <h4> Authors : {{ paper.authors }}</h4>
+
+    <p> {{ paper.abstract }}</p>
+
+    <a href="{{ paper.docUrl }}"> paper link </a>
+    <a href="/papers/delete/{{ paper.id }}"> delete paper </a>
+
+
+  {% else %}
+    <p> Error </p>
+  {% endif %}
+
+{% endblock %}

@@ -12,6 +12,13 @@ INVALID_TOKEN = 401
 NO_PERMITION = 403
 NOT_FOUND = 404
 
+error_messages = {
+    INVALID_INFO : "Invalid paperID", 
+    INVALID_TOKEN : "Access token missing or invalid", 
+    NO_PERMITION : "No permission to perform requested operation on requested resource",
+    NOT_FOUND : "Paper not found"
+}
+
 url = "https://aduck.rnl.tecnico.ulisboa.pt/istpaper/papers"
 token = "ist195680"
 
