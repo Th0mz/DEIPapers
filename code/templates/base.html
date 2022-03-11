@@ -1,3 +1,11 @@
+{% load static %}
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'papers/css/bootstrap.css' %}"
+/>
+
 <!doctype html>
 <html lang="en-us">
   <head>
@@ -14,8 +22,8 @@
   <body>
     <header>
       <h1 style="margin-bottom: 0">DEI Paper</h1>
-      <a href="/papers/">home</a> /
-      <a href="/add/">add paper</a>
+      <a href="/papers">home</a> /
+      <a href="/papers/add/">add paper</a>
     </header>
     <hr>
     {% block content %}
