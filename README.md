@@ -1,6 +1,4 @@
 # DEIpaper
----
-
 ### Requirements
  - Python (version 3)
  - Django
