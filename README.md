@@ -5,8 +5,6 @@
  - Python (version 3)
  - Django
 
-<br>
-
 ### Start Server
 To run the server :
 
